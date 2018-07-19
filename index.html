@@ -15,20 +15,17 @@
 <body>
 
     <!-- Topic display here -->
-    <div class="row button-style " id="topics">
-        <button data-food="burger" class="btn">Burger</button>
-        <button data-food="pizza" class="btn">Pizza</button>
-        <button data-food="soda" class="btn">Soda</button>
-        <button data-food="icecream" class="btn">Ice-Cream</button>
+    <div class="row item" id="topics">
     </div>
 
-    <div class="row justify-content-between">
-        <div class="col-7">
+    <div class="row">
+        <div class="col">
             <div class="row" id="gifs"></div>
         </div>
         <div class="col-5">
             <p>Add a food</p>
-            <input type="text" style="width: 100%; padding-top: 10px">
+            <input type="text" style="width: 100%; padding-top: 10px" id="food-input">
+            <input type="submit" class="btn" value="Submit" id="submit-food">
         </div>
     </div>
 </body>
