@@ -1,7 +1,18 @@
 $(document).ready(function() {
   console.log("ready!");
 
-  var topics = ["Hamburger", "Pizza", "Soda", "Ice - Cream"];
+  var topics = [
+    "Hamburger",
+    "Pizza",
+    "Soda",
+    "Ice Cream",
+    "Banana",
+    "Chocolate",
+    "French Fries",
+    "Steak",
+    "Chips",
+    "Eggs"
+  ];
   populate(topics);
 
   $("#submit-food").on("click", function(event) {
@@ -21,13 +32,14 @@ $(document).ready(function() {
       $("#topics").append(
         "<button data-food='" +
           topics[i] +
-          "' class='btn food'>" +
+          "' class='btn btn-primary food'>" +
           topics[i] +
           "</button>"
       );
     }
   }
-  //OMG!!!!! I don't know exactly why this has to be written like this:
+  //https://stackoverflow.com/questions/18196185/jquery-click-event-doesnt-work-after-append-dont-know-how-to-use-on/18196330#18196330
+  //OMG!!!!! I don't know exactly why it has to be written like this:
   // $('#selector-to-thing-that-exists').on('click', '.thing-that-will-be-added-later', function() {
   // alert('Do stuff here!');
   // });

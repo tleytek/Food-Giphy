@@ -1,15 +1,19 @@
-/* .food {
-  margin: 10px 10px;
-}
-
-.item {
-  margin: 20px 20px;
-}
-
-.item {
-  margin-left: 20px;
+.food {
+  margin: 5px 10px;
 }
 
 #food-input {
   margin-bottom: 10px;
-} */
+}
+
+p {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+body {
+  background-color: aquamarine;
+}
+img {
+  margin: 0px 5px;
+}
