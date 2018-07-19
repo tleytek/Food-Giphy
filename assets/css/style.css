@@ -1,0 +1,15 @@
+.btn {
+  margin: 20px 20px;
+}
+
+.item {
+  margin: 20px 20px;
+}
+
+* {
+  background-color: aqua;
+}
+
+input {
+  color: white;
+}
