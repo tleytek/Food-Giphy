@@ -30,9 +30,9 @@ $(document).ready(function() {
           foodImage.attr({
             src: results[i].images.fixed_height_still.url,
             imgState: "still",
-            class: "gif",
             imgStill: results[i].images.fixed_height_still.url,
-            imgAnimate: results[i].images.fixed_height.url
+            imgAnimate: results[i].images.fixed_height.url,
+            class: "gif"
           });
 
           gifDiv.append(p);
@@ -41,10 +41,35 @@ $(document).ready(function() {
           $("#gifs").prepend(gifDiv);
         }
       }
+
+      // OK so I found out that if you have this outside of the ajax promise then it won't work? Why is that?
+      $("img").on("click", function() {
+        var state = $(this).attr("imgState");
+
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("imgAnimate"));
+          $(this).attr("imgState", "animate");
+          console.log("I'm animating");
+        } else {
+          $(this).attr("src", $(this).attr("imgStill"));
+          $(this).attr("imgState", "still");
+          console.log("I'm frozen");
+        }
+      });
     });
   });
 
-  $(".gif").on("click", function() {
-    var state = $(this).attr;
-  });
+  // OK so I found out that if you have this outside of your ajax promise then it won't work?
+  // $("img").on("click", function() {
+  //   var state = $(this).attr("imgState");
+
+  //   if (state === "still") {
+  //     $(this).attr("src", $(this).attr("imgAnimate"));
+  //     $(this).attr("imgState", "animate");
+  //     console.log("Im pressed");
+  //   } else {
+  //     $(this).attr("src", $(this).attr("imgStill"));
+  //     $(this).attr("imgState", "still");
+  //   }
+  // });
 });
